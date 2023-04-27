@@ -6,33 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infinte Hydraulics Solutions</title>
-    <link rel="stylesheet" href="/Styles/main.css">
+
     <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Styles/main.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body class="bg-transparent absolute">
+
     <!-- Navbar -->
     <nav class="absolute shadow bg-[#FBD46D]/20 w-full">
         <div class="container px-6 py-3 mx-auto md:flex md:justify-between md:items-center justify-around">
             <div class="flex items-center justify-between">
                 <a href="#">
-                    <img class="w-32 h-14 aspect-square object-contain mix-blend-color-burn" src="/Assets/Logo.png" alt="">
+                    <img class="w-32 h-14 aspect-square object-contain mix-blend-color-burn"
+                        src="/Assets/Logo.png" alt="">
                 </a>
 
-                <!-- Mobile menu button -->
-                <div class="flex lg:hidden">
-                    <button type="button"
-                        class="text-white focus:outline-none hover:"
-                        aria-label="toggle menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                <div class="dropdown dropdown-left dropdown-bottom md:hidden">
+                    <label tabindex="0" class="md:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
-                    </button>
+                    </label>
+                    <div class="menu dropdown-content mt-3 p-2 shadow bg-base-100 rounded-xl bg-white" tabindex="0">
+                        <!-- <div class="flex justify-around"> -->
+                        <div class="">
+                            <li class="active:bg-gray-100 focus:bg-gray-100"><a href="/">Home</a></li>
+                            <li class="active:bg-gray-100 focus:bg-gray-100">
+                                <label class="justify-between" for="my-modal-4">
+                                    Products
+                                    <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24">
+                                        <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                                    </svg>
+                                </label>
+                            </li>
+                            <li class="active:bg-gray-100 focus:bg-gray-100"><a href="/pages/contact.html">Contact</a>
+                            </li>
+                            <li class="active:bg-gray-100 focus:bg-gray-100"><a href="/pages/aboutus.html">About</a>
+                            </li>
+                        </div>
+                        <!-- </div> -->
+                    </div>
                 </div>
             </div>
 
-            <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
             <div
                 class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white  md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center hidden">
                 <div class="flex flex-col md:flex-row md:mx-6">
@@ -82,31 +107,31 @@
 
         <section class="h-screen bg-black/50">
             <div class="mx-auto max-w-screen-xl px-4 py-32 flex h-screen items-center">
-                <div class="mx-auto max-w-xl text-center">
+                <div class="mx-auto max-w-4xl text-center">
                     <h1 class="text-3xl font-extrabold sm:text-5xl text-white">
-                        Lorem ipsum dolor sit.
-                        <strong class="font-extrabold text-gray-100 sm:block">
-                            Lorem, ipsum dolor.
-                        </strong>
+                        Infinte Hydraulics Solutions
                     </h1>
 
                     <p class="mt-4 sm:text-xl sm:leading-relaxed text-white">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
-                        tenetur fuga ducimus numquam ea!
+                        Authorized Dealers for
+                        <span class="text-[#4F8A8B] font-extrabold">
+                            POLYHOSE
+                        </span>
+
                     </p>
 
                     <div class="mt-8 flex flex-wrap justify-center gap-4">
-                        <a class="block w-full rounded px-12 py-3 bg-green-500 text-sm font-medium text-white shadow focus:outline-none focus:ring sm:w-auto transition-all ease-in-out hover:bg-transparent hover:text-gray-100 hover:border-2 hover:border-green-600"
-                            href="/get-started">
+                        <a class="block w-full rounded px-12 py-3 text-sm font-medium text-white shadow focus:outline-none focus:ring sm:w-auto transition-all ease-in-out bg-[#4F8A8B] hover:bg-transparent hover:text-gray-100 hover:border-2 hover:border-[#4F8A8B]-600"
+                            href="#About">
                             Get Started
                         </a>
 
-                        <button class="learn-more button">
-                            <span class="circle bg-gray-600" aria-hidden="true">
-                                <span class="icon arrow"></span>
-                            </span>
-                            <span class="button-text text-gray-100">Learn More</span>
-                        </button>
+                        <a href="/pages/aboutus.html"><button class="learn-more button">
+                                <span class="circle bg-gray-600" aria-hidden="true">
+                                    <span class="icon arrow"></span>
+                                </span>
+                                <span class="button-text text-gray-100">Learn More</span>
+                            </button></a>
                     </div>
                 </div>
             </div>
@@ -115,7 +140,7 @@
     </div>
 
     <!-- About  -->
-    <section>
+    <section id="About">
         <div class="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
                 <div class="relative z-10 lg:py-16 bg-transparent">
@@ -148,7 +173,7 @@
                             provide quality products to our clients.
                         </p>
 
-                        <a href="#"
+                        <a href="/pages/aboutus.html"
                             class="mt-8 inline-block rounded text-gray-900 bg-[#FBD46D] px-12 py-3 text-sm font-medium focus:outline-none focus:ring transition-all ease-in-out hover:bg-transparent hover:border hover:border-[#FBD46D]">
                             Lets GO -->
                         </a>
@@ -164,7 +189,7 @@
         <!-- Product-1 -->
         <div
             class="group relative overflow-hidden w-full sm:w-1/2 md:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hover:scale-105 transition-all ease-in-out duration-200">
-            <img src="/Assets/hoses.png" alt=""
+            <img src="/assets/hoses-c729e382.png" alt=""
                 class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl" />
             <div class="relative bg-white p-6">
                 <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium">
@@ -188,7 +213,7 @@
         <!-- Product-2 -->
         <div
             class="group relative overflow-hidden w-full sm:w-1/2 md:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl transition-all ease-in-out duration-200">
-            <img src="/Assets/fittings.jpg" alt=""
+            <img src="/assets/fittings-d85dda24.jpg" alt=""
                 class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl" />
             <div class="relative bg-white p-6">
                 <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium">
@@ -200,7 +225,7 @@
                 <!-- <p class="mt-1.5 text-sm text-gray-700">$14.99</p> -->
 
                 <div class="mt-4">
-                    <a href=""
+                    <a href="pages/hydraulic-Fittings.html"
                         class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105">
                         View Products
                     </a>
@@ -212,7 +237,7 @@
         <!-- Product-3 -->
         <div
             class="group relative overflow-hidden w-full sm:w-1/2 md:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl transition-all ease-in-out duration-200">
-            <img src="/Assets/industrial-valves.png" alt=""
+            <img src="/assets/industrial-valves-0e03adbe.png" alt=""
                 class="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl" />
             <div class="relative bg-white p-6">
                 <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium">
@@ -224,7 +249,7 @@
                 <!-- <p class="mt-1.5 text-sm text-gray-700">$14.99</p> -->
 
                 <div class="mt-4">
-                    <a href=""
+                    <a href="pages/industrial-Valves.html"
                         class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105">
                         View Products
                     </a>
@@ -238,9 +263,8 @@
     <!-- Products -->
 
     <!-- CTA  -->
-    <section class="my-10">
-        <div
-            class="overflow-hidden bg-[url(https://images.unsplash.com/photo-1602810319428-019690571b5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)] bg-cover bg-center bg-no-repeat mt-10">
+    <section class="my-10 ">
+        <div class="bg-[url(/Assets/products/pneumatics.jpg)] bg-cover bg-center bg-no-repeat mt-10 overflow-hidden">
             <div class="bg-black/25 p-8 md:p-12 lg:px-16 lg:py-24">
                 <div class="text-center mx-auto flex flex-col items-center">
                     <h2 class="text-2xl font-bold text-white sm:text-3xl md:text-5xl">
@@ -253,8 +277,8 @@
                     </p>
 
                     <div class="mt-4 sm:mt-8">
-                        <a href="#"
-                            class="inline-block rounded-full text-gray-800 hover:text-white bg-[#FBD46D] px-12 py-3 text-sm font-medium transition hover:bg-black/40 hover:border hover:border-[#FBD46D] focus:outline-none focus:ring focus:ring-yellow-400">
+                        <a href="mailto:"
+                            class="inline-block rounded-full text-gray-800 hover:text-white bg-[#FBD46D] px-12 py-3 text-sm font-medium transition hover:bg-[#4F8A8B] hover:border hover:border-[#4F8A8B] focus:outline-none focus:ring focus:ring-yellow-400">
                             Get Yours Today
                         </a>
                     </div>
@@ -282,10 +306,10 @@
         <div class="container px-6 mx-auto">
 
             <marquee behavior="scroll" direction="horizontal" scrollamount="10">
-                <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+                <div class="flex gap-8 mt-8 xl:mt-12 xl:gap-12 h-full">
                     <!-- scrollamount is speed  of scroll -->
 
-                    <div class="overflow-hidden bg-cover rounded-lg cursor-pointer h-96 group"
+                    <div class="overflow-hidden bg-cover bg-right rounded-lg cursor-pointer w-full h-96 group"
                         style="background-image:url('https://images.unsplash.com/photo-1621111848501-8d3634f82336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1565&q=80')">
                         <div
                             class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
@@ -295,7 +319,7 @@
                         </div>
                     </div>
 
-                    <div class="overflow-hidden bg-cover rounded-lg cursor-pointer h-96 group"
+                    <div class="overflow-hidden bg-cover bg-right rounded-lg cursor-pointer w-full h-96 group"
                         style="background-image:url('https://images.unsplash.com/photo-1621609764180-2ca554a9d6f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80')">
                         <div
                             class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
@@ -305,7 +329,7 @@
                         </div>
                     </div>
 
-                    <div class="overflow-hidden bg-cover rounded-lg cursor-pointer h-96 group"
+                    <div class="overflow-hidden bg-cover bg-right rounded-lg cursor-pointer w-full h-96 group"
                         style="background-image:url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')">
                         <div
                             class="flex flex-col justify-center w-full h-full px-8 py-4 transition-opacity duration-700 opacity-0 backdrop-blur-sm bg-gray-800/60 group-hover:opacity-100">
@@ -335,11 +359,12 @@
         <div class="flex flex-col max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-lg md:flex-row md:h-48">
             <div class="md:flex md:items-center md:justify-center md:w-1/2 md:bg-[#FBD46D]">
                 <div class="px-6 py-6 md:px-8 md:py-0">
-                    <h2 class="text-lg font-bold text-gray-700">Connect<span class="text-[#4F8A8B]"> With </span> Us
+                    <h2 class="text-lg font-bold text-gray-700 text-left">Connect<span class="text-[#4F8A8B]"> With
+                        </span> Us
                     </h2>
 
-                    <p class="mt-2 text-sm text-gray-600">Lorem ipsum dolor sit, amet
-                        consectetur adipisicing elit. Consectetur obcaecati odio</p>
+                    <p class="mt-2 text-sm text-gray-600">Infinite Hydraulic Solutions specialised in energy conveyance
+                        product design, development, production, and distribution.</p>
                 </div>
             </div>
 
@@ -373,13 +398,13 @@
             </div>
         </div>
         <div class="mx-auto max-w-[1340px] px-4 py-16 sm:px-6 sm:py-24">
-            <div class="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
-                <div class="max-w-xl text-center sm:text-left">
-                    <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">
+            <div class="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:gap-x-16">
+                <div class="sm:w-full">
+                    <h3 class="text-3xl font-bold tracking-tight sm:text-4xl text-start">
                         Don't just take our word for it...
                         <br class="hidden sm:block lg:hidden" />
                         Read reviews from our customers
-                    </h2>
+                    </h3>
 
                     <p class="mt-4 text-gray-500">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
@@ -607,7 +632,7 @@
         <div
             class="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
             <a href="#">
-                <img class="w-auto h-10" src="/Assets/Logo.png" alt="">
+                <img class="w-32 h-14 aspect-square object-contain" src="/assets/Footer-Logo.png" alt="">
             </a>
 
             <p class="text-sm text-gray-600">© Copyright Infinite Hydraulics 2023. All Rights Reserved.</p>
@@ -646,6 +671,34 @@
         </div>
     </footer>
     <!-- Footer  -->
+
+    <!-- NavModal  -->
+    <input type="checkbox" id="my-modal-4" class="modal-toggle z-50" />
+    <label for="my-modal-4" class="modal cursor-pointer">
+        <label class="modal-box relative" for="">
+            <div class="">
+                <a href="/pages/hydraulicHoses.html"
+                    class="block text-center active:bg-gray-100 focus:bg-gray-100 active:text-black focus:text-black hover:bg-gray-100 text-xl">Hydraulics
+                    Hoses</a>
+                <a href="/pages/hydraulic-Fittings.html"
+                    class="block mt-10 text-center active:bg-gray-100 focus:bg-gray-100 active:text-black focus:text-black hover:bg-gray-100 text-xl">Hydraulics
+                    Fittings</a>
+                <a href="/pages/pnuematics.html"
+                    class="block mt-10 text-center active:bg-gray-100 focus:bg-gray-100 active:text-black focus:text-black hover:bg-gray-100 text-xl">Pneumatics</a>
+                <a href="/pages/industrial-Valves.html"
+                    class="block mt-10 text-center active:bg-gray-100 focus:bg-gray-100 active:text-black focus:text-black hover:bg-gray-100 text-xl">Industrial
+                    Valves</a>
+                <a href="/pages/pipes-Tubes.html"
+                    class="block mt-10 text-center active:bg-gray-100 focus:bg-gray-100 active:text-black focus:text-black hover:bg-gray-100 text-xl">Pipes
+                    and Tubes</a>
+                <a href="/pages/seals.html"
+                    class="block mt-10 text-center active:bg-gray-100 focus:bg-gray-100 active:text-black focus:text-black hover:bg-gray-100 text-xl">Seals</a>
+                <a href="/pages/general-consumable.html"
+                    class="block mt-10 text-center active:bg-gray-100 focus:bg-gray-100 active:text-black focus:text-black hover:bg-gray-100 text-xl">General
+                    Consumable</a>
+            </div>
+        </label>
+    </label>
 
 </body>
 <script>
