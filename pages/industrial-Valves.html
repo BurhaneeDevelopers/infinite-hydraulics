@@ -1,133 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Industrial Valves</title>
-    <link rel="stylesheet" href="/Styles/main.css">
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/Styles/main.css" />
+    <script
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+      type="text/javascript"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-</head>
+  </head>
 
-<body class="">
+  <body class="">
     <!-- Navbar -->
-    <nav class="relative bg-white shadow ">
-        <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
-            <div class="flex items-center justify-between">
-                <a href="../index.html">
-                    <img class="w-32 h-14 aspect-square object-contain" src="/Assets/Logo.png" alt="">
-                </a>
+    <nav class="absolute shadow bg-[#FBD46D]/20 w-full">
+      <div
+        class="container px-6 py-3 mx-auto md:flex md:justify-between md:items-center justify-around"
+      >
+        <div class="flex items-center justify-between">
+          <a href="#">
+            <img
+              class="w-32 h-14 aspect-square object-contain mix-blend-color-burn"
+              src="/Assets/Logo.png"
+              alt=""
+            />
+          </a>
 
-                <!-- Mobile menu button -->
-                <div class="flex lg:hidden">
-                    <button type="button"
-                        class="text-gray-500 hover:text-[#4F8A8B] focus:outline-none focus:text-[#4F8A8B]"
-                        aria-label="toggle menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-            <div
-                class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white  md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center hidden">
-                <div class="flex flex-col md:flex-row md:mx-6">
-                    <a class="text-lg my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
-                        href="../index.html">Home</a>
-
-                    <div class="dropdown dropdown-bottom dropdown-hover">
-                        <label tabindex="0" class=""> <a
-                                class="text-lg my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
-                                href="#">Products</a></label>
-                        <ul tabindex="0"
-                            class="dropdown-content menu p-2 shadow rounded-lg w-52 bg-gray-100 hover:bg-white">
-                            <li class=""><a href="HydraulicHoses.html"
-                                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900">Hydraulics
-                                    Hoses</a></li>
-                            <li class=""><a href="Hydraulic-Fittings.html"
-                                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900">Hydraulics
-                                    Fittings</a></li>
-                            <li class=""><a href="Pnuematics.html"
-                                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900">Pneumatics</a>
-                            </li>
-                            <li class=""><a href="Industrial-Valves.html"
-                                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900">Industrial
-                                    Valves</a></li>
-                            <li class=""><a href="Pipes-Tubes.html"
-                                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900">Pipes
-                                    and Tubes</a></li>
-                            <li class=""><a href="Seals.html"
-                                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900">Seals</a>
-                            </li>
-                            <li class=""><a href="General-consumable.html"
-                                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900">General
-                                    Consumable</a></li>
-                        </ul>
-                    </div>
-                    <a class="text-lg my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
-                        href="/Pages/Contact.html">Contact</a>
-                    <a class="text-lg my-2 text-gray-700 transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
-                        href="/Pages/Aboutus.html">About</a>
-                </div>
-            </div>
+          <div class="md:hidden">
+            <label tabindex="0" class="md:hidden" id="toggle-nav">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </label>
+          </div>
         </div>
+
+        <div
+          class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center hidden"
+        >
+          <div class="flex flex-col md:flex-row md:mx-6">
+            <a
+              class="text-lg my-2 text-white transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
+              href="#"
+              >Home</a
+            >
+
+            <div class="dropdown dropdown-bottom dropdown-hover">
+              <label tabindex="0" class="">
+                <a
+                  class="text-lg my-2 text-white transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
+                  href="#"
+                  >Products</a
+                ></label
+              >
+              <ul
+                tabindex="0"
+                class="dropdown-content menu p-2 shadow rounded-lg w-52 bg-gray-100 hover:bg-white"
+              >
+                <li class="">
+                  <a
+                    href="/pages/hydraulicHoses.html"
+                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900"
+                    >Hydraulics Hoses</a
+                  >
+                </li>
+                <li class="">
+                  <a
+                    href="/pages/hydraulic-Fittings.html"
+                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900"
+                    >Hydraulics Fittings</a
+                  >
+                </li>
+                <li class="">
+                  <a
+                    href="/pages/hydraulic-Equipments.html"
+                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900"
+                    >Hydraulics Equipments</a
+                  >
+                </li>
+                <li class="">
+                  <a
+                    href="/pages/hydraulic-pumps.html"
+                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900"
+                    >Hydraulics Pumps</a
+                  >
+                </li>
+                <li class="">
+                  <a
+                    href="/pages/pnuematics.html"
+                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900"
+                    >Pneumatics</a
+                  >
+                </li>
+                <li class="">
+                  <a
+                    href="/pages/seals.html"
+                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900"
+                    >Seals</a
+                  >
+                </li>
+                <li class="">
+                  <a
+                    href="/pages/industrial-Valves.html"
+                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900"
+                    >Industrial Valves</a
+                  >
+                </li>
+                <li class="">
+                  <a
+                    href="/pages/pipes-Tubes.html"
+                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900"
+                    >Pipes and Tubes</a
+                  >
+                </li>
+                <li class="">
+                  <a
+                    href="/pages/measuring-instruments.html"
+                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900"
+                    >Measuring Instruments</a
+                  >
+                </li>
+                <li class="">
+                  <a
+                    href="/pages/general-consumable.html"
+                    class="active:bg-transparent focus:bg-transparent active:text-black focus:text-black hover:text-gray-900"
+                    >General Consumable</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <a
+              class="text-lg my-2 text-white transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
+              href="/pages/contact.html"
+              >Contact</a
+            >
+            <a
+              class="text-lg my-2 text-white transition-colors duration-300 transform hover:text-blue-500 md:mx-4 md:my-0"
+              href="/pages/aboutus.html"
+              >About</a
+            >
+          </div>
+        </div>
+      </div>
     </nav>
+    <div
+      class="bg-white absolute w-64 xs:w-1/2 h-screen z-50 hidden overflow-y-scroll"
+      id="nav"
+    >
+      <nav class="p-5 flex flex-col">
+        <div class="flex justify-between items-center">
+          <span
+            ><img
+              class="w-32 h-14 aspect-square object-contain"
+              src="/Assets/Logo.png"
+              alt=""
+          /></span>
+          <button
+            class="bg-gray-500 text-white py-1 px-3 text-lg rounded-lg"
+            id="toggle-nav-close"
+          >
+            X
+          </button>
+        </div>
+        <ul class="mt-3 my-auto">
+          <li class="my-10">
+            <a href="" class="text-2xl xs:text-xl">Home</a>
+          </li>
+          <li class="my-10" id="drop-btn">
+            <a class="text-2xl xs:text-xl flex items-center"
+              >Products
+              <svg
+                class="fill-current mt-1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59,16.58L13.17,12L8.59,8.41L10,6L16,12L10,18L8.59,16.58Z"
+                />
+              </svg>
+            </a>
+
+            <span
+              class="px-1 hidden transition-all duration-500 ease-in-out"
+              id="drop-section"
+            >
+              <span class="flex flex-col">
+                <a href="#" class="text-xl my-2">Hydraulic Hoses</a>
+                <a href="#" class="text-xl my-2">Hydraulic Fittings</a>
+                <a href="#" class="text-xl my-2">Pneumatics</a>
+                <a href="#" class="text-xl my-2">Industrial Valves</a>
+                <a href="#" class="text-xl my-2">Piped and Tubes</a>
+                <a href="#" class="text-xl my-2">Seals</a>
+                <a href="#" class="text-xl my-2">General Consumable</a>
+              </span>
+            </span>
+          </li>
+          <li class="my-10">
+            <a href="" class="text-2xl xs:text-xl">Contact</a>
+          </li>
+          <li class="my-10">
+            <a href="" class="text-2xl xs:text-xl">About</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Navbar  -->
 
     <!-- Banner -->
     <div
-        class="bg-[url(/Assets/IndustrialValveBanner.jpg)] h-80 w-full flex justify-center items-center bg-cover bg-center">
-        <!-- CONTENT  -->
-        <div class="bg-gray-200/10 h-80 w-full flex justify-center items-center flex-col">
-            <!-- <h1 class="text-white text-6xl my-2">Hydraulics< tex-[#07031A]/h1> -->
-            <nav aria-label="Breadcrumb" class="flex ">
-                <ol role="list" class="flex overflow-hidden rounded-lg border border-gray-200 text-[#4F8A8B]">
-                    <li class="flex items-center">
-                        <a href="#" class="flex h-14 items-center bg-gray-100 px-4 transition hover:text-gray-900">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                            </svg>
+      class="bg-[url(/Assets/IndustrialValveBanner.jpg)] h-80 w-full flex justify-center items-center bg-cover bg-center"
+    >
+      <!-- CONTENT  -->
+      <div
+        class="bg-gray-200/10 h-80 w-full flex justify-center items-center flex-col"
+      >
+        <!-- <h1 class="text-white text-6xl my-2">Hydraulics< tex-[#07031A]/h1> -->
+        <nav aria-label="Breadcrumb" class="flex">
+          <ol
+            role="list"
+            class="flex overflow-hidden rounded-lg border border-gray-200 text-[#4F8A8B]"
+          >
+            <li class="flex items-center">
+              <a
+                href="#"
+                class="flex h-14 items-center bg-gray-100 px-4 transition hover:text-gray-900"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  />
+                </svg>
 
-                            <span class="ml-1.5 text-lg font-medium"> Home </span>
-                        </a>
-                    </li>
+                <span class="ml-1.5 text-lg font-medium"> Home </span>
+              </a>
+            </li>
 
-                    <li class="relative flex items-center">
-                        <span
-                            class="absolute inset-y-0 -left-px h-14 w-4 bg-gray-100 [clip-path:_polygon(0_0,_0%_100%,_100%_50%)]">
-                        </span>
+            <li class="relative flex items-center">
+              <span
+                class="absolute inset-y-0 -left-px h-14 w-4 bg-gray-100 [clip-path:_polygon(0_0,_0%_100%,_100%_50%)]"
+              >
+              </span>
 
-                        <a href="#"
-                            class="flex h-14 items-center bg-white pl-8 pr-4 text-lg font-medium transition text-[#07031A] hover:text-gray-500">
-                            Industrial Valves
-                        </a>
-                    </li>
-                </ol>
-            </nav>
-        </div>
-        <!-- CONTENT  -->
+              <a
+                href="#"
+                class="flex h-14 items-center bg-white pl-8 pr-4 text-lg font-medium transition text-[#07031A] hover:text-gray-500"
+              >
+                Industrial Valves
+              </a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <!-- CONTENT  -->
     </div>
     <!-- Banner  -->
 
     <!-- Products -->
-    <div class=" my-10">
-        <div class="mx-auto max-w-xl text-center my-10">
-            <h2 class="text-3xl tex-[#07031A] font-bold sm:text-5xl">Industrial Valves</h2>
+    <div class="my-10">
+      <div class="mx-auto max-w-xl text-center my-10">
+        <h2 class="text-3xl tex-[#07031A] font-bold sm:text-5xl">
+          Industrial Valves
+        </h2>
 
-            <p class="mt-4 text-[#4F8A8B] max-w-lg mx-auto">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
-                aliquam doloribus nesciunt eos fugiat. Vitae aperiam fugit consequuntur
-                saepe laborum.
-            </p>
-        </div>
-        <!-- SEARCH BAR  -->
-        <!-- <div class="flex justify-end items-end px-5 my-10">
+        <p class="mt-4 text-[#4F8A8B] max-w-lg mx-auto">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur
+          aliquam doloribus nesciunt eos fugiat. Vitae aperiam fugit
+          consequuntur saepe laborum.
+        </p>
+      </div>
+      <!-- SEARCH BAR  -->
+      <!-- <div class="flex justify-end items-end px-5 my-10">
       <label for="Search"
         class="relative block overflow-hidden border-b border-gray-200 pt-3 focus-within:border-blue-600 w-1/3">
         <input type="search" id="Search" placeholder="Hydraulic Gears..."
@@ -146,8 +312,8 @@
         </svg>
       </div>
     </div> -->
-        <!-- SEARCH BAR  -->
-        <!-- <div class="flex flex-wrap justify-center gap-2">
+      <!-- SEARCH BAR  -->
+      <!-- <div class="flex flex-wrap justify-center gap-2">
       <button class="p-4 px-8 bg-gray-300 rounded-xl text-lg" onclick="filter('all')">All</button>
       <button class="p-4 px-8 bg-gray-200 rounded-md lg:text-lg md:w-1/5 lg:w-1/6" onclick="filter('hydraulic1')">Rubber
         Hoses</button>
@@ -167,382 +333,669 @@
         onclick="filter('hydraulic8')">Agricultural Hoses</button>
     </div> -->
 
-        <div class="flex flex-wrap justify-center my-10 gap-10 px-10 sm:px-0" id="products">
+      <div
+        class="flex flex-wrap justify-center my-10 gap-10 px-10 sm:px-0"
+        id="products"
+      >
+        <!-- Product-1 -->
+        <div
+          class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic1"
+        >
+          <img
+            src="/Assets/Products/industrial-solenoid-valve.jpg"
+            alt="Adapters"
+            class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl"
+          />
+          <div class="relative bg-white p-6">
+            <span
+              class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"
+            >
+              Category
+            </span>
 
-            <!-- Product-1 -->
-            <div
-                class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic1">
-                <img src="/Assets/Products/industrial-solenoid-valve.jpg" alt="Adapters"
-                    class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl" />
-                <div class="relative bg-white p-6">
-                    <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium">
-                        Category
-                    </span>
+            <h3 class="mt-4 text-lg font-medium text-gray-900">
+              High Pressure Ball Valves
+            </h3>
 
-                    <h3 class="mt-4 text-lg font-medium text-gray-900">High Pressure Ball Valves</h3>
-
-                    <div class="flex justify-between items-center">
-                        <a href="#" class="mt-1.5 text-sm text-indigo-700 underline">Contact Us --></a>
-                    </div>
-
-                    <div class="mt-4">
-                        <label for="my-modal-4"
-                            class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105">
-                            Show Details
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <!-- Product-1 -->
-
-            <!-- Product-2 -->
-            <div
-                class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic2">
-                <img src="/Assets/Products/cylinderValves.jpg" alt=""
-                    class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl" />
-                <div class="relative bg-white p-6">
-                    <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium">
-                        Category
-                    </span>
-
-                    <h3 class="mt-4 text-lg font-medium text-gray-900">Cylinders Valve</h3>
-
-                    <div class="flex justify-between items-center">
-                        <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
-                        <a href="#" class="mt-1.5 text-sm text-indigo-700 underline">Contact Us --></a>
-                    </div>
-
-                    <div class="mt-4">
-                        <label for="my-modal-4"
-                            class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105">
-                            Show Details
-                        </label>
-                    </div>
-                </div>
+            <div class="flex justify-between items-center">
+              <a href="#" class="mt-1.5 text-sm text-indigo-700 underline"
+                >Contact Us --></a
+              >
             </div>
 
-            <div
-                class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic1">
-                <img src="/Assets/products/monoblock-valves.jpg" alt="Adapters"
-                    class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl" />
-                <div class="relative bg-white p-6">
-                    <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium">
-                        Category
-                    </span>
-
-                    <h3 class="mt-4 text-lg font-medium text-gray-900">Monoblock Valves</h3>
-
-                    <div class="flex justify-between items-center">
-                        <a href="#" class="mt-1.5 text-sm text-indigo-700 underline">Contact Us --></a>
-                    </div>
-
-                    <div class="mt-4">
-                        <label for="my-modal-4"
-                            class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105">
-                            Show Details
-                        </label>
-                    </div>
-                </div>
+            <div class="mt-4">
+              <label
+                for="my-modal-4"
+                class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105"
+              >
+                Show Details
+              </label>
             </div>
-
-            <div
-                class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3">
-                <img src="/Assets/Products/industrial-valves.webp" alt=""
-                    class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl" />
-                <div class="relative bg-white p-6">
-                    <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium">
-                        Category
-                    </span>
-
-                    <h3 class="mt-4 text-lg font-medium text-gray-900">Gate Valves</h3>
-
-                    <div class="flex justify-between items-center">
-                        <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
-                        <a href="#" class="mt-1.5 text-sm text-indigo-700 underline">Contact Us --></a>
-                    </div>
-
-                    <div class="mt-4">
-                        <label for="my-modal-4"
-                            class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105">
-                            Show Details
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3">
-                <img src="/Assets/Products/ball-valves.webp" alt=""
-                    class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl" />
-                <div class="relative bg-white p-6">
-                    <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium">
-                        Category
-                    </span>
-
-                    <h3 class="mt-4 text-lg font-medium text-gray-900">Ball Valves - Screwed End</h3>
-
-                    <div class="flex justify-between items-center">
-                        <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
-                        <a href="#" class="mt-1.5 text-sm text-indigo-700 underline">Contact Us --></a>
-                    </div>
-
-                    <div class="mt-4">
-                        <label for="my-modal-4"
-                            class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105">
-                            Show Details
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3">
-                <img src="/Assets/Products/ball-valves.webp" alt=""
-                    class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl" />
-                <div class="relative bg-white p-6">
-                    <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium">
-                        Category
-                    </span>
-
-                    <h3 class="mt-4 text-lg font-medium text-gray-900">Ball Valves - Flange End</h3>
-
-                    <div class="flex justify-between items-center">
-                        <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
-                        <a href="#" class="mt-1.5 text-sm text-indigo-700 underline">Contact Us --></a>
-                    </div>
-
-                    <div class="mt-4">
-                        <label for="my-modal-4"
-                            class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105">
-                            Show Details
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3">
-                <img src="/Assets/Products/butterfly-valves.jpg" alt=""
-                    class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl" />
-                <div class="relative bg-white p-6">
-                    <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium">
-                        Category
-                    </span>
-
-                    <h3 class="mt-4 text-lg font-medium text-gray-900">Butterfly Valves</h3>
-
-                    <div class="flex justify-between items-center">
-                        <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
-                        <a href="#" class="mt-1.5 text-sm text-indigo-700 underline">Contact Us --></a>
-                    </div>
-
-                    <div class="mt-4">
-                        <label for="my-modal-4"
-                            class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105">
-                            Show Details
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3">
-                <img src="/Assets/Products/butterfly-valves.jpg" alt=""
-                    class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl" />
-                <div class="relative bg-white p-6">
-                    <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium">
-                        Category
-                    </span>
-
-                    <h3 class="mt-4 text-lg font-medium text-gray-900">Pneumatic Rotary Actuator Valves</h3>
-
-                    <div class="flex justify-between items-center">
-                        <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
-                        <a href="#" class="mt-1.5 text-sm text-indigo-700 underline">Contact Us --></a>
-                    </div>
-
-                    <div class="mt-4">
-                        <label for="my-modal-4"
-                            class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105">
-                            Show Details
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3">
-                <img src="/Assets/Products/butterfly-valves.jpg" alt=""
-                    class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl" />
-                <div class="relative bg-white p-6">
-                    <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium">
-                        Category
-                    </span>
-
-                    <h3 class="mt-4 text-lg font-medium text-gray-900">Wafer Type Check Valves</h3>
-
-                    <div class="flex justify-between items-center">
-                        <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
-                        <a href="#" class="mt-1.5 text-sm text-indigo-700 underline">Contact Us --></a>
-                    </div>
-
-                    <div class="mt-4">
-                        <label for="my-modal-4"
-                            class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105">
-                            Show Details
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3">
-                <img src="/Assets/Products/non-return-valves.webp" alt=""
-                    class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl" />
-                <div class="relative bg-white p-6">
-                    <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium">
-                        Category
-                    </span>
-
-                    <h3 class="mt-4 text-lg font-medium text-gray-900">Non Return Valves</h3>
-
-                    <div class="flex justify-between items-center">
-                        <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
-                        <a href="#" class="mt-1.5 text-sm text-indigo-700 underline">Contact Us --></a>
-                    </div>
-
-                    <div class="mt-4">
-                        <label for="my-modal-4"
-                            class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105">
-                            Show Details
-                        </label>
-                    </div>
-                </div>
-            </div>
-
-            <div
-                class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3">
-                <img src="/Assets/Products/strainers.jpg" alt=""
-                    class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl" />
-                <div class="relative bg-white p-6">
-                    <span class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium">
-                        Category
-                    </span>
-
-                    <h3 class="mt-4 text-lg font-medium text-gray-900">Strainers</h3>
-
-                    <div class="flex justify-between items-center">
-                        <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
-                        <a href="#" class="mt-1.5 text-sm text-indigo-700 underline">Contact Us --></a>
-                    </div>
-
-                    <div class="mt-4">
-                        <label for="my-modal-4"
-                            class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105">
-                            Show Details
-                        </label>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
+        <!-- Product-1 -->
+
+        <!-- Product-2 -->
+        <div
+          class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic2"
+        >
+          <img
+            src="/Assets/Products/cylinderValves.jpg"
+            alt=""
+            class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl"
+          />
+          <div class="relative bg-white p-6">
+            <span
+              class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"
+            >
+              Category
+            </span>
+
+            <h3 class="mt-4 text-lg font-medium text-gray-900">
+              Cylinders Valve
+            </h3>
+
+            <div class="flex justify-between items-center">
+              <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
+              <a href="#" class="mt-1.5 text-sm text-indigo-700 underline"
+                >Contact Us --></a
+              >
+            </div>
+
+            <div class="mt-4">
+              <label
+                for="my-modal-4"
+                class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105"
+              >
+                Show Details
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic1"
+        >
+          <img
+            src="/Assets/products/monoblock-valves.jpg"
+            alt="Adapters"
+            class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl"
+          />
+          <div class="relative bg-white p-6">
+            <span
+              class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"
+            >
+              Category
+            </span>
+
+            <h3 class="mt-4 text-lg font-medium text-gray-900">
+              Monoblock Valves
+            </h3>
+
+            <div class="flex justify-between items-center">
+              <a href="#" class="mt-1.5 text-sm text-indigo-700 underline"
+                >Contact Us --></a
+              >
+            </div>
+
+            <div class="mt-4">
+              <label
+                for="my-modal-4"
+                class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105"
+              >
+                Show Details
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3"
+        >
+          <img
+            src="/Assets/Products/industrial-valves.webp"
+            alt=""
+            class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl"
+          />
+          <div class="relative bg-white p-6">
+            <span
+              class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"
+            >
+              Category
+            </span>
+
+            <h3 class="mt-4 text-lg font-medium text-gray-900">Gate Valves</h3>
+
+            <div class="flex justify-between items-center">
+              <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
+              <a href="#" class="mt-1.5 text-sm text-indigo-700 underline"
+                >Contact Us --></a
+              >
+            </div>
+
+            <div class="mt-4">
+              <label
+                for="my-modal-4"
+                class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105"
+              >
+                Show Details
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3"
+        >
+          <img
+            src="/Assets/Products/ball-valves.webp"
+            alt=""
+            class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl"
+          />
+          <div class="relative bg-white p-6">
+            <span
+              class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"
+            >
+              Category
+            </span>
+
+            <h3 class="mt-4 text-lg font-medium text-gray-900">
+              Ball Valves - Screwed End
+            </h3>
+
+            <div class="flex justify-between items-center">
+              <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
+              <a href="#" class="mt-1.5 text-sm text-indigo-700 underline"
+                >Contact Us --></a
+              >
+            </div>
+
+            <div class="mt-4">
+              <label
+                for="my-modal-4"
+                class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105"
+              >
+                Show Details
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3"
+        >
+          <img
+            src="/Assets/Products/ball-valves.webp"
+            alt=""
+            class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl"
+          />
+          <div class="relative bg-white p-6">
+            <span
+              class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"
+            >
+              Category
+            </span>
+
+            <h3 class="mt-4 text-lg font-medium text-gray-900">
+              Ball Valves - Flange End
+            </h3>
+
+            <div class="flex justify-between items-center">
+              <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
+              <a href="#" class="mt-1.5 text-sm text-indigo-700 underline"
+                >Contact Us --></a
+              >
+            </div>
+
+            <div class="mt-4">
+              <label
+                for="my-modal-4"
+                class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105"
+              >
+                Show Details
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3"
+        >
+          <img
+            src="/Assets/Products/butterfly-valves.jpg"
+            alt=""
+            class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl"
+          />
+          <div class="relative bg-white p-6">
+            <span
+              class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"
+            >
+              Category
+            </span>
+
+            <h3 class="mt-4 text-lg font-medium text-gray-900">
+              Butterfly Valves
+            </h3>
+
+            <div class="flex justify-between items-center">
+              <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
+              <a href="#" class="mt-1.5 text-sm text-indigo-700 underline"
+                >Contact Us --></a
+              >
+            </div>
+
+            <div class="mt-4">
+              <label
+                for="my-modal-4"
+                class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105"
+              >
+                Show Details
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3"
+        >
+          <img
+            src="/Assets/Products/butterfly-valves.jpg"
+            alt=""
+            class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl"
+          />
+          <div class="relative bg-white p-6">
+            <span
+              class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"
+            >
+              Category
+            </span>
+
+            <h3 class="mt-4 text-lg font-medium text-gray-900">
+              Pneumatic Rotary Actuator Valves
+            </h3>
+
+            <div class="flex justify-between items-center">
+              <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
+              <a href="#" class="mt-1.5 text-sm text-indigo-700 underline"
+                >Contact Us --></a
+              >
+            </div>
+
+            <div class="mt-4">
+              <label
+                for="my-modal-4"
+                class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105"
+              >
+                Show Details
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3"
+        >
+          <img
+            src="/Assets/Products/butterfly-valves.jpg"
+            alt=""
+            class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl"
+          />
+          <div class="relative bg-white p-6">
+            <span
+              class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"
+            >
+              Category
+            </span>
+
+            <h3 class="mt-4 text-lg font-medium text-gray-900">
+              Wafer Type Check Valves
+            </h3>
+
+            <div class="flex justify-between items-center">
+              <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
+              <a href="#" class="mt-1.5 text-sm text-indigo-700 underline"
+                >Contact Us --></a
+              >
+            </div>
+
+            <div class="mt-4">
+              <label
+                for="my-modal-4"
+                class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105"
+              >
+                Show Details
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3"
+        >
+          <img
+            src="/Assets/Products/non-return-valves.webp"
+            alt=""
+            class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl"
+          />
+          <div class="relative bg-white p-6">
+            <span
+              class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"
+            >
+              Category
+            </span>
+
+            <h3 class="mt-4 text-lg font-medium text-gray-900">
+              Non Return Valves
+            </h3>
+
+            <div class="flex justify-between items-center">
+              <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
+              <a href="#" class="mt-1.5 text-sm text-indigo-700 underline"
+                >Contact Us --></a
+              >
+            </div>
+
+            <div class="mt-4">
+              <label
+                for="my-modal-4"
+                class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105"
+              >
+                Show Details
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="group relative overflow-hidden w-full xs:w-1/2 sm:w-1/3 lg:w-1/4 border border-gray-300 rounded-xl shadow-xl hydraulic hydraulic3"
+        >
+          <img
+            src="/Assets/Products/strainers.jpg"
+            alt=""
+            class="h-64 w-full object-contain transition duration-500 group-hover:scale-105 sm:h-72 rounded-xl"
+          />
+          <div class="relative bg-white p-6">
+            <span
+              class="whitespace-nowrap bg-yellow-400 px-3 py-1.5 text-xs font-medium"
+            >
+              Category
+            </span>
+
+            <h3 class="mt-4 text-lg font-medium text-gray-900">Strainers</h3>
+
+            <div class="flex justify-between items-center">
+              <p class="mt-1.5 text-sm text-gray-700">$14.99</p>
+              <a href="#" class="mt-1.5 text-sm text-indigo-700 underline"
+                >Contact Us --></a
+              >
+            </div>
+
+            <div class="mt-4">
+              <label
+                for="my-modal-4"
+                class="block w-full rounded bg-[#FBD46D] text-center p-4 text-sm font-medium transition hover:scale-105"
+              >
+                Show Details
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Products -->
 
-    <div class="p-20">
-        <div class="flex flex-col items-center text-center justify-center mb-10">
-            <h2 class="text-2xl font-semibold text-gray-800 capitalize lg:text-5xl">Our Partners</h2>
+    <!--  lycris-parker Astin abcon-->
 
-            <div class="">
-                <span class="inline-block w-40 h-1 bg-[#FBD46D] rounded-full"></span>
-                <span class="inline-block w-3 h-1 ml-1 bg-[#FBD46D] rounded-full"></span>
-                <span class="inline-block w-1 h-1 ml-1 bg-[#FBD46D] rounded-full"></span>
-            </div>
+    <div class="sm:pb-10 sm:px-10 md:px-20 md:pb-20 p-5">
+      <div class="flex flex-col items-center text-center justify-center mb-10">
+        <h2 class="text-2xl font-semibold text-gray-800 capitalize lg:text-5xl">
+          We deal in
+        </h2>
+
+        <div class="">
+          <span class="inline-block w-40 h-1 bg-[#FBD46D] rounded-full"></span>
+          <span
+            class="inline-block w-3 h-1 ml-1 bg-[#FBD46D] rounded-full"
+          ></span>
+          <span
+            class="inline-block w-1 h-1 ml-1 bg-[#FBD46D] rounded-full"
+          ></span>
         </div>
-        <section class="flex justify-center items-center">
-            <div class="w-40 mr-5 flex justify-center items-center my-auto"><img loading="lazy"
-                    class="aspect-square object-contain"
-                    src="https://polyhydron.com/pplimage_misc/Logo%20Foundation.png"></div>
-            <div class="w-40 mr-5 flex justify-center items-center my-auto"><img loading="lazy"
-                    class="aspect-square object-contain"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Logo_of_Bosch_Rexroth_AG.svg/1200px-Logo_of_Bosch_Rexroth_AG.svg.png">
-            </div>
-            <div class="w-40 ml-5 my-auto"><img loading="lazy" class="aspect-square object-contain"
-                    src="https://airautomation.com/wp-content/uploads/2020/11/Nitto-Kohki-Logo.png"></div>
+      </div>
 
-            <!-- L&T holmbury  yuken flowcon lycris-parker zoloto lehry Astin abcon-->
-        </section>
+      <section class="justify-center items-center">
+        <marquee behavior="scroll" direction="horizontal" scrollamount="20">
+          <div class="flex gap-12">
+            <img
+              loading="lazy"
+              class="w-40 object-contain"
+              src="https://polyhydron.com/pplimage_misc/Logo%20Foundation.png"
+            />
+
+            <img
+              loading="lazy"
+              class="w-40 object-contain"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Logo_of_Bosch_Rexroth_AG.svg/1200px-Logo_of_Bosch_Rexroth_AG.svg.png"
+            />
+
+            <img
+              loading="lazy"
+              class="w-40 object-contain"
+              src="https://airautomation.com/wp-content/uploads/2020/11/Nitto-Kohki-Logo.png"
+            />
+
+            <img
+              loading="lazy"
+              class="w-40 object-contain"
+              src="https://yuken-usa.com/wp-content/uploads/2021/11/YukenTranspar.gif"
+            />
+
+            <img
+              loading="lazy"
+              class="w-40 object-contain"
+              src="holmbury.com/app/themes/holmbury/assets/images/logo.svg"
+            />
+
+            <img
+              loading="lazy"
+              class="w-40 object-contain"
+              src="https://gumlet.assettype.com/swarajya%2F2020-07%2F84c2ca1f-cb6d-4267-a146-d901693d57c4%2FL_T.jpg?q=75&auto=format%2Ccompress&w=400&dpr=2.6"
+            />
+
+            <img
+              loading="lazy"
+              class="w-40 object-contain"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvf5lD5rjyaVZPCN2svtxahdFU4AK6_9aCelJIFd8zNKRZ9JtukX4LF1EKGJc4leoRJxA"
+            />
+
+            <img
+              loading="lazy"
+              class="w-40 object-contain"
+              src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.austin-ind.com%2F&psig=AOvVaw0md_8cm7-IrkGYVuapVrPW&ust=1686374146954000&source=images&cd=vfe&ved=0CBEQjRxqGAoTCIj-_bG3tf8CFQAAAAAdAAAAABCCAQ"
+            />
+
+            <img
+              loading="lazy"
+              class="w-40 object-contain"
+              src="https://www.indusroof.com/pub/media/codazon_cache/brand/250x/wysiwyg/codazon/main-content-05/brand/zoloto-logo.png"
+            />
+
+            <img
+              loading="lazy"
+              class="w-40 object-contain"
+              src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/eagu04ajvdtm6drkx09t"
+            />
+
+            <img
+              loading="lazy"
+              class="w-40 object-contain"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Parker.svg/1200px-Parker.svg.png"
+            />
+
+            <img
+              loading="lazy"
+              class="w-40 object-contain"
+              src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facebook.com%2FAbconIndProd%2F&psig=AOvVaw0IOJhIwR8DVfY80sNK4tnz&ust=1686374019776000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMjAjfW2tf8CFQAAAAAdAAAAABAE"
+            />
+          </div>
+        </marquee>
+      </section>
     </div>
 
     <!-- MODAL  -->
     <input type="checkbox" id="my-modal-4" class="modal-toggle" />
     <label for="my-modal-4" class="modal cursor-pointer">
-        <label class="modal-box relative bg-gray-100" for="">
-            <label for="my-modal-4" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-            <h3 class="text-2xl font-bold">Product Name</h3>
-            <hr class="my-2">
-            <h3 class="text-xl font-bold mt-4 mb-2">Product Description</h3>
-            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio laboriosam sed maiores ex
-                maxime
-                delectus ullam cum, eveniet ut assumenda!</p>
-            <ul class="flex flex-col ml-5 my-4">
-                <li class="list-disc">Detail-1</li>
-                <li class="list-disc">Detail-2</li>
-                <li class="list-disc">detail-3</li>
-            </ul>
+      <label class="modal-box relative bg-gray-100" for="">
+        <label
+          for="my-modal-4"
+          class="btn btn-sm btn-circle absolute right-2 top-2"
+          >✕</label
+        >
+        <h3 class="text-2xl font-bold">Product Name</h3>
+        <hr class="my-2" />
+        <h3 class="text-xl font-bold mt-4 mb-2">Product Description</h3>
+        <p class="">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          laboriosam sed maiores ex maxime delectus ullam cum, eveniet ut
+          assumenda!
+        </p>
+        <ul class="flex flex-col ml-5 my-4">
+          <li class="list-disc">Detail-1</li>
+          <li class="list-disc">Detail-2</li>
+          <li class="list-disc">detail-3</li>
+        </ul>
 
-            <div class="flex justify-between mt-8">
-                <p class="text-gray-800 text-xl font-bold">$24.45</p>
-                <button
-                    class="p-2 px-5 rounded-md bg-[#FBD46D] border-none text-teal-900 text-center font-semibold hover:scale-105 transition-all ease-in-out">Contact</button>
-            </div>
-        </label>
+        <div class="flex justify-between mt-8">
+          <p class="text-gray-800 text-xl font-bold">$24.45</p>
+          <button
+            class="p-2 px-5 rounded-md bg-[#FBD46D] border-none text-teal-900 text-center font-semibold hover:scale-105 transition-all ease-in-out"
+          >
+            Contact
+          </button>
+        </div>
+      </label>
     </label>
     <!-- MODAL  -->
-    <!-- Footer  -->
-    <footer class="bg-gray-100">
-        <div
-            class="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
-            <a href="#">
-                <img class="w-32 h-14 aspect-square object-contain" src="/assets/Footer-Logo.png" alt="">
-            </a>
+    <footer aria-label="Site Footer" class="bg-gray-100">
+      <div
+        class="max-w-screen-xl px-4 pt-16 pb-8 mx-auto sm:px-6 lg:px-8 lg:pt-24"
+      >
+        <div class="text-center">
+          <h2
+            class="text-3xl font-extrabold text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl heading"
+          >
+            Infinite Hydraulics
+          </h2>
 
-            <p class="text-sm text-gray-600">© Copyright Infinite Hydraulics 2023. All Rights Reserved.</p>
+          <p class="max-w-sm mx-auto mt-4 text-gray-500">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum
+            maiores ipsum eos temporibus ea nihil.
+          </p>
 
-            <div class="flex -mx-2">
-                <a href="#" class="mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500"
-                    aria-label="Reddit">
-                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
-                        </path>
-                    </svg>
-                </a>
-
-                <a href="#" class="mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500"
-                    aria-label="Facebook">
-                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
-                        </path>
-                    </svg>
-                </a>
-
-                <a href="#" class="mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500"
-                    aria-label="Github">
-                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
-                        </path>
-                    </svg>
-                </a>
-            </div>
+          <a
+            href="#"
+            class="inline-block px-12 py-3 mt-8 text-sm font-medium text-[#262626] border border-orange-500 hover:border-transparent rounded-full hover:text-gray-100 hover:bg-gray-600"
+          >
+            Get Started
+          </a>
         </div>
-    </footer>
-    <!-- Footer  -->
-</body>
 
+        <div
+          class="pt-8 mt-16 border-t border-gray-100 sm:flex sm:items-center sm:justify-between lg:mt-24"
+        >
+          <nav aria-label="Footer Navigation - Support">
+            <ul
+              class="flex flex-wrap justify-center gap-4 text-xs lg:justify-end"
+            >
+              <li>
+                <a href="#" class="text-gray-500 transition hover:opacity-75">
+                  Terms & Conditions
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-500 transition hover:opacity-75">
+                  Privacy Policy
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="text-gray-500 transition hover:opacity-75">
+                  Cookies
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="flex justify-center items-center gap-6 mt-8 sm:mt-0 lg:justify-end">
+
+            <li>
+              <a
+                href="/"
+                rel="noreferrer"
+                target="_blank"
+                class="text-gray-700 transition hover:opacity-75"
+              >
+                <span class="sr-only">Call</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-phone-call"
+                >
+                  <path
+                    d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/"
+                rel="noreferrer"
+                target="_blank"
+                class="text-gray-700 transition hover:opacity-75"
+              >
+                <span class="sr-only">Whatsapp</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="23"
+                  height="23"
+                  fill="currentColor"
+                  class="bi bi-whatsapp"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                  />
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/"
+                rel="noreferrer"
+                target="_blank"
+                class="text-gray-700 transition hover:opacity-75"
+              >
+                <span class="sr-only">Dribbble</span>
+
+               <img src="/assets/icons/indiamart.svg" alt="Indiamart" class="w-10">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
